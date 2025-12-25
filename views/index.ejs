@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h2 class="h5">1) เลือกสีวัวที่กำลังจะลงทะเบียน</h2>
+
+    <% if (error) { %>
+      <div class="alert alert-danger mt-3"><%- error %></div>
+    <% } %>
+
+    <form class="mt-3" method="POST" action="/choose-color">
+      <div class="mb-3">
+        <label class="form-label">สีวัว</label>
+        <select class="form-select" name="color" required>
+          <option value="" selected disabled>-- เลือกสี --</option>
+          <option value="White">White (ขาว)</option>
+          <option value="Brown">Brown (น้ำตาล)</option>
+          <option value="Pink">Pink (ชมพู)</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" type="submit">ไปหน้าลงทะเบียน</button>
+      <a class="btn btn-outline-secondary ms-2" href="/summary">ดูสรุปฟาร์ม</a>
+    </form>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
