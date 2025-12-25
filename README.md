@@ -73,4 +73,4 @@ erDiagram
 
 ## Use cases diagram
 
-![หน้าเลือกสี](docs/images/use cases.png)
+![หน้าเลือกสี](docs/images/use-cases.png)
